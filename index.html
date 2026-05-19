@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Francisco Orellana | Product Designer & UX/UI Freelance</title>
+    <meta name="description" content="Product Designer con +4 años en Fintech y medios de pago. Auditoría y diseño web orientado a resultados.">
+    <meta property="og:title" content="Francisco Orellana | Product Designer & UX/UI Freelance">
+    <meta property="og:description" content="Auditoría y diseño web para pymes y agencias. Proceso, evidencia y entregables claros.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- HEADER -->
+    <header id="header" class="site-header">
+        <div class="container">
+            <div class="site-header__layout">
+                <a href="#hero" class="site-header__brand" aria-label="Ir al inicio">
+                    <span class="site-header__brand-text">Olivacraft</span>
+                    <span class="site-header__mode" data-service-label aria-live="polite">Auditoría</span>
+                </a>
+                <nav id="site-navigation" class="site-navigation" aria-label="Navegación principal">
+                    <ul class="site-navigation__list">
+                        <li class="site-navigation__item"><a href="#problema" class="site-navigation__link">Problema</a></li>
+                        <li class="site-navigation__item"><a href="#oferta-principal" class="site-navigation__link">Servicio</a></li>
+                        <li class="site-navigation__item"><a href="#resultados" class="site-navigation__link">Resultados</a></li>
+                        <li class="site-navigation__item"><a href="#sobre-mi" class="site-navigation__link">Sobre mí</a></li>
+                        <li class="site-navigation__item"><a href="#contacto" class="site-navigation__link">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="site-header__actions">
+                    <button type="button" class="site-header__theme-button" aria-label="Cambiar a modo oscuro">
+                        <span class="icon-sun" aria-hidden="true">☀️</span>
+                        <span class="icon-moon" aria-hidden="true">🌙</span>
+                    </button>
+                    <button type="button" class="site-header__menu-button" aria-expanded="false" aria-controls="site-navigation" aria-label="Abrir menú de navegación">
+                        <span class="site-header__menu-line" aria-hidden="true"></span>
+                        <span class="site-header__menu-line" aria-hidden="true"></span>
+                        <span class="site-header__menu-line" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- STICKY CTA MOBILE -->
+    <div class="sticky-cta" id="sticky-cta" aria-hidden="true">
+        <a href="#contacto" class="sticky-cta__button">Solicitar diagnóstico →</a>
+    </div>
+
+    <main id="main-content" role="main">
+
+        <!-- HERO -->
+        <section id="hero" class="hero section" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="hero__layout">
+                    <div class="hero__content">
+                        <div class="service-switch" role="tablist" aria-label="Seleccionar servicio">
+                            <button type="button" class="service-switch__button is-active" data-service="audit" role="tab" aria-selected="true">Auditoría</button>
+                            <button type="button" class="service-switch__button" data-service="design" role="tab" aria-selected="false">Diseño</button>
+                        </div>
+                        <h1 id="hero-title" class="hero__title" data-hero-title>
+                            Tu sitio podría estar perdiendo clientes
+                        </h1>
+                        <p class="hero__description" data-hero-description>
+                            Detecto fricción, errores y oportunidades invisibles que afectan conversión, confianza y resultados.
+                        </p>
+                        <div class="hero__actions">
+                            <a href="#contacto" class="hero__primary-link btn btn--primary" data-hero-primary-cta>
+                                Solicitar diagnóstico →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROBLEMA -->
+        <section id="problema" class="section" aria-labelledby="problema-title">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="eyebrow">Señales críticas</span>
+                    <h2 id="problema-title" class="section__title" data-problema-title>Problemas frecuentes que frenan resultados</h2>
+                    <p class="section__description" data-problema-description>Estas señales suelen generar dudas, fricción o abandono antes del contacto.</p>
+                </div>
+                <ul class="problema__grid" aria-label="Situaciones comunes" data-problema-cards>
+
+                    <li class="problema__item">
+                        <div class="problema__icon-wrap" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="8" y="14" width="32" height="3" rx="1.5" stroke="currentColor" stroke-width="1.75"/>
+                                <rect x="8" y="22" width="20" height="3" rx="1.5" stroke="currentColor" stroke-width="1.75"/>
+                                <rect x="8" y="30" width="26" height="3" rx="1.5" stroke="currentColor" stroke-width="1.75"/>
+                                <circle cx="36" cy="34" r="7" stroke="currentColor" stroke-width="1.75"/>
+                                <line x1="33" y1="34" x2="39" y2="34" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="problema__card-title" data-card-title>Tu propuesta no se entiende rápido.</h3>
+                        <p class="problema__card-description" data-card-desc>Si la claridad falla en segundos, aumentan las dudas y baja la intención de contacto.</p>
+                    </li>
+
+                    <li class="problema__item">
+                        <div class="problema__icon-wrap" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="24" cy="24" r="14" stroke="currentColor" stroke-width="1.75"/>
+                                <line x1="24" y1="18" x2="24" y2="26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="24" cy="31" r="1.25" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3 class="problema__card-title" data-card-title>Tu sitio genera dudas.</h3>
+                        <p class="problema__card-description" data-card-desc>Cuando falta confianza visual o contenido claro, la persona compara y se va.</p>
+                    </li>
+
+                    <li class="problema__item">
+                        <div class="problema__icon-wrap" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <polyline points="8,36 18,24 26,30 38,14" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                <line x1="34" y1="14" x2="38" y2="14" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+                                <line x1="38" y1="14" x2="38" y2="18" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+                                <line x1="8" y1="40" x2="40" y2="40" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 3"/>
+                            </svg>
+                        </div>
+                        <h3 class="problema__card-title" data-card-title>Inviertes, pero no conviertes.</h3>
+                        <p class="problema__card-description" data-card-desc>Puedes estar atrayendo visitas, pero perdiendo oportunidades por fricción invisible.</p>
+                    </li>
+
+                    <li class="problema__item">
+                        <div class="problema__icon-wrap" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="8" y="28" width="10" height="12" rx="2" stroke="currentColor" stroke-width="1.75"/>
+                                <rect x="22" y="20" width="10" height="20" rx="2" stroke="currentColor" stroke-width="1.75"/>
+                                <rect x="36" y="12" width="4" height="28" rx="2" stroke="currentColor" stroke-width="1.75"/>
+                                <line x1="8" y1="10" x2="40" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 3"/>
+                            </svg>
+                        </div>
+                        <h3 class="problema__card-title" data-card-title>Tu competencia parece más confiable.</h3>
+                        <p class="problema__card-description" data-card-desc>Una mejor estructura, evidencia y jerarquía puede cambiar la percepción de valor.</p>
+                    </li>
+
+                </ul>
+                <p class="problema__note text-center" data-problema-note>Detectarlo a tiempo cambia decisiones, inversión y resultados.</p>
+            </div>
+        </section>
+
+        <!-- OFERTA PRINCIPAL -->
+        <section id="oferta-principal" class="section section--dark-accent" aria-labelledby="oferta-title">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="eyebrow eyebrow--light">Servicio principal</span>
+                    <h2 id="oferta-title" class="section__title section__title--light" data-oferta-title>Diagnóstico de tu sitio web</h2>
+                    <p class="section__description section__description--light" data-oferta-description>Recibes una revisión clara, priorizada y explicada para saber qué corregir primero.</p>
+                </div>
+
+                <ul class="oferta__grid" aria-label="Qué incluye el servicio" data-oferta-cards>
+                    <li class="oferta__item">
+                        <div class="oferta__item-num" aria-hidden="true">01</div>
+                        <h3 class="oferta__card-title" data-card-title>Revisión estructural.</h3>
+                        <p class="oferta__card-description" data-card-desc>Analizo contenido, jerarquía y recorrido para entender si la página guía bien la decisión.</p>
+                    </li>
+                    <li class="oferta__item">
+                        <div class="oferta__item-num" aria-hidden="true">02</div>
+                        <h3 class="oferta__card-title" data-card-title>Detección de fricción.</h3>
+                        <p class="oferta__card-description" data-card-desc>Identifico puntos que generan dudas, abandono o pérdida de confianza antes del contacto.</p>
+                    </li>
+                    <li class="oferta__item">
+                        <div class="oferta__item-num" aria-hidden="true">03</div>
+                        <h3 class="oferta__card-title" data-card-title>Oportunidades concretas.</h3>
+                        <p class="oferta__card-description" data-card-desc>Te muestro mejoras específicas para claridad, interacción y conversión con ejemplos reales.</p>
+                    </li>
+                    <li class="oferta__item">
+                        <div class="oferta__item-num" aria-hidden="true">04</div>
+                        <h3 class="oferta__card-title" data-card-title>Plan priorizado.</h3>
+                        <p class="oferta__card-description" data-card-desc>Ordeno los hallazgos según impacto para que sepas exactamente qué corregir primero.</p>
+                    </li>
+                </ul>
+
+                <!-- PRICING CARD — Opción B horizontal -->
+                <div class="oferta__meta" aria-label="Condiciones del servicio">
+                    <div class="oferta__meta-left">
+                        <span class="oferta__meta-badge" data-oferta-badge>Auditoría</span>
+                        <h3 class="oferta__meta-title" data-oferta-context-title>Diagnóstico claro y accionable</h3>
+                        <p class="oferta__meta-desc" data-oferta-context-desc>Ideal para negocios que necesitan entender qué está frenando resultados antes de invertir más.</p>
+                        <div class="oferta__meta-delivery">
+                            <span class="oferta__meta-delivery-label">Entrega</span>
+                            <span class="oferta__meta-delivery-value" data-oferta-delivery>1 a 3 días hábiles</span>
+                        </div>
+                    </div>
+                    <div class="oferta__meta-right">
+                        <div class="oferta__meta-price-block">
+                            <span class="oferta__meta-prefix">Desde</span>
+                            <span class="oferta__meta-price" data-oferta-price>$99.000</span>
+                            <span class="oferta__meta-suffix">+ IVA / servicio</span>
+                        </div>
+                        <ul class="oferta__meta-checklist">
+                            <li class="oferta__meta-check" data-oferta-features>evisión estuctural y de flujo completo</li>
+                            <li class="oferta__meta-check" data-oferta-features1>Detección de puntos de fricción y abandono</li>
+                            <li class="oferta__meta-check" data-oferta-features2>Informe visual con oportunidades de conversión</li>
+                            <li class="oferta__meta-check" data-oferta-features3>Plan de acción priorizado por impacto técnico</li>
+                        </ul>
+                        <a href="#contacto" class="oferta__cta" data-oferta-cta>Solicitar diagnóstico →</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- RESULTADOS -->
+        <section id="resultados" class="section" aria-labelledby="resultados-title">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="eyebrow">Evidencia aplicada</span>
+                    <h2 id="resultados-title" class="section__title" data-resultados-title>Casos reales de mejora detectada</h2>
+                    <p class="section__description" data-resultados-description>Ejemplos de fricciones reales y mejoras posibles para aumentar claridad, confianza y contacto.</p>
+                </div>
+
+                <!-- Carousel wrapper con controles -->
+                <div class="resultados__carousel-wrapper">
+                    <button class="resultados__nav resultados__nav--prev" aria-label="Tarjeta anterior" id="carousel-prev" type="button">&#8592;</button>
+
+                    <div class="resultados__carousel" id="resultados-carousel" data-resultados-cards aria-label="Casos de mejora" tabindex="0">
+
+                        <article class="resultado-card">
+                            <div class="resultado-card__image">
+                                <img src="/assets/problem1.webp" alt="Formulario sin estado de envío visible" loading="lazy">
+                            </div>
+                            <div class="resultado-card__body">
+                                <span class="resultado-card__eyebrow">Problema</span>
+                                <h3 class="resultado-card__title">Fuga de leads en formularios críticos</h3>
+                                <div class="resultado-card__divider"></div>
+                                <div class="resultado-card__row">
+                                    <span class="resultado-card__row-label">Impacto</span>
+                                    <p class="resultado-card__text">Pérdida de contactos calificados que completan el flujo pero abandonan por falta de confirmación.</p>
+                                </div>
+                                <div class="resultado-card__row">
+                                    <span class="resultado-card__row-label">Mejora</span>
+                                    <p class="resultado-card__text">Validar envío, corregir destino y hacer el estado del formulario más claro.</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="resultado-card">
+                            <div class="resultado-card__image">
+                                <img src="/assets/problem2.webp" alt="Número de contacto sin enlace clickeable" loading="lazy">
+                            </div>
+                            <div class="resultado-card__body">
+                                <span class="resultado-card__eyebrow">Problema</span>
+                                <h3 class="resultado-card__title">Quiebre de conversión en tráfico móvil</h3>
+                                <div class="resultado-card__divider"></div>
+                                <div class="resultado-card__row">
+                                    <span class="resultado-card__row-label">Impacto</span>
+                                    <p class="resultado-card__text">Pérdida de llamadas inmediatas de clientes listos para comprar debido a fricción técnica en celular.</p>
+                                </div>
+                                <div class="resultado-card__row">
+                                    <span class="resultado-card__row-label">Mejora</span>
+                                    <p class="resultado-card__text">Dar visibilidad al número y facilitar el contacto inmediato.</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="resultado-card">
+                            <div class="resultado-card__image">
+                                <img src="/assets/problem3.webp" alt="Jerarquía visual confusa en página de inicio" loading="lazy">
+                            </div>
+                            <div class="resultado-card__body">
+                                <span class="resultado-card__eyebrow">Problema</span>
+                                <h3 class="resultado-card__title">Desorientación y rebote prematuro</h3>
+                                <div class="resultado-card__divider"></div>
+                                <div class="resultado-card__row">
+                                    <span class="resultado-card__row-label">Impacto</span>
+                                    <p class="resultado-card__text">El usuario entra, no entiende la propuesta de valor en los primeros 3 segundos y se va a la competencia.</p>
+                                </div>
+                                <div class="resultado-card__row">
+                                    <span class="resultado-card__row-label">Mejora</span>
+                                    <p class="resultado-card__text">Ordenar títulos, contenido y llamados a la acción para guiar la lectura.</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="resultado-card">
+                            <div class="resultado-card__image">
+                                <img src="/assets/problem4.webp" alt="Contenido excesivo sin estructura clara" loading="lazy">
+                            </div>
+                            <div class="resultado-card__body">
+                                <span class="resultado-card__eyebrow">Problema</span>
+                                <h3 class="resultado-card__title">Fatiga cognitiva y abandono de flujo</h3>
+                                <div class="resultado-card__divider"></div>
+                                <div class="resultado-card__row">
+                                    <span class="resultado-card__row-label">Impacto</span>
+                                    <p class="resultado-card__text">Bloques densos de texto que sepultan los llamados a la acción, reduciendo la intención de contacto.</p>
+                                </div>
+                                <div class="resultado-card__row">
+                                    <span class="resultado-card__row-label">Mejora</span>
+                                    <p class="resultado-card__text">Reducir texto, priorizar información clave y enfocar cada bloque en una idea.</p>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+
+                    <button class="resultados__nav resultados__nav--next" aria-label="Tarjeta siguiente" id="carousel-next" type="button">&#8594;</button>
+                </div>
+
+                <div class="resultados__actions">
+                    <a href="#contacto" class="btn btn--primary" data-resultados-cta>Solicitar revisión →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE MÍ -->
+        <section id="sobre-mi" class="section section--muted" aria-labelledby="sobre-mi-title">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="eyebrow">Quién soy</span>
+                    <h2 id="sobre-mi-title" class="section__title">Más de 4 años mejorando productos digitales reales</h2>
+                    <p class="section__description">Product Designer con base en Fintech y medios de pago. Trabajo con proceso, evidencia y entregables que conectan diseño con resultado de negocio.</p>
+                </div>
+
+                <div class="sobre-mi__stats">
+                    <div class="sobre-mi__stat">
+                        <span class="sobre-mi__stat-number">NPS</span>
+                        <span class="sobre-mi__stat-highlight">4→9</span>
+                        <span class="sobre-mi__stat-label">en 100 comercios piloto</span>
+                    </div>
+                    <div class="sobre-mi__stat">
+                        <span class="sobre-mi__stat-number">−30%</span>
+                        <span class="sobre-mi__stat-highlight">tiempos de pago</span>
+                        <span class="sobre-mi__stat-label">ecosistema POS</span>
+                    </div>
+                    <div class="sobre-mi__stat">
+                        <span class="sobre-mi__stat-number">−80%</span>
+                        <span class="sobre-mi__stat-highlight">errores de impl.</span>
+                        <span class="sobre-mi__stat-label">en 144+ flujos gestionados</span>
+                    </div>
+                </div>
+
+                <ul class="sobre-mi__skills">
+                    <li class="sobre-mi__skill-item">
+                        <span class="sobre-mi__skill-tag">UX Research + Discovery</span>
+                        <p class="sobre-mi__skill-text">Investigación de usuarios, validación de hipótesis y análisis de comportamiento para tomar decisiones con evidencia, no con intuición.</p>
+                    </li>
+                    <li class="sobre-mi__skill-item">
+                        <span class="sobre-mi__skill-tag">Diseño de Producto</span>
+                        <p class="sobre-mi__skill-text">Arquitectura de información, flujos, sistemas y prototipos. Experiencia en ecosistemas complejos como Transbank y Haulmer.</p>
+                    </li>
+                    <li class="sobre-mi__skill-item">
+                        <span class="sobre-mi__skill-tag">Proceso + IA</span>
+                        <p class="sobre-mi__skill-text">Trabajo con un método propio que integra IA para acelerar discovery, validar más rápido y entregar con trazabilidad.</p>
+                    </li>
+                </ul>
+
+                <div class="sobre-mi__companies">
+                    <p class="sobre-mi__companies-label">He trabajado con</p>
+                    <div class="sobre-mi__logos">
+                        <div class="sobre-mi__logo-item">
+                            <img src="/assets/logo-transbank.png" alt="Transbank" class="sobre-mi__logo-img">
+                            <span class="sobre-mi__logo-fallback">Transbank</span>
+                        </div>
+                        <div class="sobre-mi__logo-item">
+                            <img src="/assets/logo-tinet.png" alt="Tinet" class="sobre-mi__logo-img">
+                            <span class="sobre-mi__logo-fallback">Tinet</span>
+                        </div>
+                        <div class="sobre-mi__logo-item">
+                            <img src="/assets/logo-haulmer.png" alt="Haulmer" class="sobre-mi__logo-img">
+                            <span class="sobre-mi__logo-fallback">Haulmer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <a href="https://fcohubto.github.io/fco-orellana-pd/" target="_blank" rel="noopener" class="btn btn--outline">
+                        Explorar portafolio completo →
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contacto" class="section" aria-labelledby="contacto-title">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="eyebrow">Contacto directo</span>
+                    <h2 id="contacto-title" class="section__title" data-contacto-title>Hablemos de tu página</h2>
+                    <p class="section__description" data-contacto-description>Déjame el enlace de tu sitio y te digo si hay señales que estén afectando claridad, confianza o contacto.</p>
+                </div>
+
+                <div class="contacto__layout">
+
+                    <div class="contacto__info">
+                        <div class="contacto__block">
+                            <span class="contacto__icon" aria-hidden="true">📨</span>
+                            <div>
+                                <p class="contacto__block-label">Email</p>
+                                <a href="mailto:orellanav.francisco@gmail.com" class="contacto__link">orellanav.francisco@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contacto__block">
+                            <span class="contacto__icon" aria-hidden="true">in</span>
+                            <div>
+                                <p class="contacto__block-label">LinkedIn</p>
+                                <a href="https://www.linkedin.com/in/francisco-orellana-v/" class="contacto__link" target="_blank" rel="noopener">francisco-orellana-v</a>
+                            </div>
+                        </div>
+                        <div class="contacto__block">
+                            <span class="contacto__icon" aria-hidden="true">⏱</span>
+                            <div>
+                                <p class="contacto__block-label">Respuesta</p>
+                                <p class="contacto__text" data-contacto-time-text>En menos de 12 horas hábiles te respondo con una primera lectura de tu caso.</p>
+                            </div>
+                        </div>
+                        <div class="contacto__block">
+                            <span class="contacto__icon" aria-hidden="true">💬</span>
+                            <div>
+                                <p class="contacto__block-label" data-contacto-block-label>Primera revisión</p>
+                                <p class="contacto__text" data-contacto-block-text>El primer contacto es para entender tu negocio y tu sitio. Tú decides si avanzamos.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contacto__form-wrapper">
+                        <form class="contacto__form" id="contacto-form" name="contacto" method="POST" data-netlify="true" novalidate>
+                            <input type="hidden" name="form-name" value="contacto">
+
+                            <div class="contacto__field">
+                                <label for="nombre" class="contacto__label">Nombre</label>
+                                <input type="text" id="nombre" name="nombre" class="contacto__input" autocomplete="name" required aria-describedby="error-nombre">
+                                <p class="contacto__error" id="error-nombre" role="alert">Ingresa tu nombre.</p>
+                            </div>
+
+                            <div class="contacto__field">
+                                <label for="email" class="contacto__label">Email</label>
+                                <input type="email" id="email" name="email" class="contacto__input" autocomplete="email" required aria-describedby="error-email">
+                                <p class="contacto__error" id="error-email" role="alert">Ingresa un email válido.</p>
+                            </div>
+
+                            <div class="contacto__field" id="campo-url">
+                                <label for="enlace" class="contacto__label">
+                                    URL de tu sitio web
+                                    <span class="contacto__hint">Ej: https://tuempresa.cl</span>
+                                </label>
+                                <input type="url" id="enlace" name="enlace" class="contacto__input" placeholder="https://" required aria-describedby="error-enlace">
+                                <p class="contacto__error" id="error-enlace" role="alert">Ingresa una URL válida.</p>
+                            </div>
+
+                            <div class="contacto__field">
+                                <label for="mensaje" class="contacto__label">
+                                    ¿Qué problema quieres resolver?
+                                    <span class="contacto__hint">Cuéntame brevemente</span>
+                                </label>
+                                <textarea id="mensaje" name="mensaje" class="contacto__textarea" rows="4" required aria-describedby="error-mensaje"></textarea>
+                                <p class="contacto__error" id="error-mensaje" role="alert">Cuéntame brevemente qué necesitas.</p>
+                            </div>
+
+                            <div class="contacto__field contacto__field--checkbox">
+                                <label class="contacto__checkbox">
+                                    <input type="checkbox" name="terminos" required>
+                                    <span>Acepto los <a href="#legal-modal" class="js-modal-trigger">términos y condiciones</a> y la <a href="#legal-modal" class="js-modal-trigger">política de privacidad</a>.</span>
+                                </label>
+                            </div>
+
+                            <div class="contacto__actions">
+                                <div class="cf-turnstile" data-sitekey="0x4AAAAAAC-Jed24OpiKb_pI"></div>
+                                <button type="submit" class="btn btn--primary btn--full" data-contacto-cta>Enviar solicitud →</button>
+                            </div>
+                        </form>
+
+                        <div class="contacto__success" id="contacto-success" hidden aria-live="polite">
+                            <span class="contacto__success-icon" aria-hidden="true">✓</span>
+                            <h3 class="contacto__success-title">Solicitud enviada</h3>
+                            <p class="contacto__success-text">Te respondo en menos de 12 horas hábiles con una primera revisión de tu caso.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" aria-labelledby="footer-title">
+        <div class="container">
+            <div class="footer__layout">
+                <div class="footer__brand">
+                    <h3 id="footer-title" class="footer__title">fcoux.pd</h3>
+                    <p class="footer__description">Product Designer freelance. Diagnóstico UX/UI y diseño web con proceso, evidencia y resultados medibles.</p>
+                </div>
+                <nav class="footer__col" aria-label="Navegación secundaria">
+                    <span class="footer__col-label">Navegación</span>
+                    <ul class="footer__list">
+                        <li><a href="#hero" class="footer__link">Inicio</a></li>
+                        <li><a href="#problema" class="footer__link">Problema</a></li>
+                        <li><a href="#oferta-principal" class="footer__link">Servicio</a></li>
+                        <li><a href="#resultados" class="footer__link">Resultados</a></li>
+                        <li><a href="#sobre-mi" class="footer__link">Sobre mí</a></li>
+                        <li><a href="#contacto" class="footer__link">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="footer__col">
+                    <span class="footer__col-label">Contacto</span>
+                    <ul class="footer__list">
+                        <li><a href="mailto:orellanav.francisco@gmail.com" class="footer__link">orellanav.francisco@gmail.com</a></li>
+                        <li><a href="https://www.linkedin.com/in/francisco-orellana-v/" class="footer__link" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a href="https://fcohubto.github.io/fco-orellana-pd/" class="footer__link" target="_blank" rel="noopener">Portafolio</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copy">© 2026 Francisco Orellana. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="legal-modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__container">
+            <button type="button" class="modal__close" data-close-modal aria-label="Cerrar modal">✕</button>
+            <div class="modal__content">
+                <h2 id="modal-title" class="modal__heading">Términos y condiciones</h2>
+                <p class="modal__text">Los datos proporcionados en este formulario se utilizarán exclusivamente con el objetivo de establecer un contacto comercial directo contigo para responder a tus consultas y evaluar tu caso de diseño o auditoría. No utilizaremos tu información
+                    para ningún otro fin.</p>
+                <h2 class="modal__heading">Política de privacidad</h2>
+                <p class="modal__text">Garantizamos la total confidencialidad de tus datos. Tu información no será compartida, vendida ni transferida a terceras partes bajo ninguna circunstancia. Además, nos comprometemos firmemente a no enviarte spam, publicidad masiva ni
+                    correo basura.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
