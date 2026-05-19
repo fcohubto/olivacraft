@@ -263,7 +263,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 description: "Sitios y experiencias diseñadas para comunicar mejor, ordenar contenido y facilitar contacto.",
                 cta: "Solicitar diseño web →",
                 cards: [{
-                        image: "olivacraft/assets/design-koyam.webp",
+                        image: "assets/design-koyam.webp",
                         alt: "Grupo Koyam sitio web",
                         eyebrow: "Cliente",
                         title: "Grupo Koyam",
@@ -273,7 +273,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         ]
                     },
                     {
-                        image: "/assets/design-rafcon.webp",
+                        image: "assets/design-rafcon.webp",
                         alt: "Rafcon sitio web",
                         eyebrow: "Cliente",
                         title: "Rafcon",
@@ -283,7 +283,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         ]
                     },
                     {
-                        image: "/assets/design-concept-fintech.webp",
+                        image: "assets/design-concept-fintech.webp",
                         alt: "Concepto de Landing Page de Alta Conversión para Fintech",
                         eyebrow: "Concepto",
                         title: "Landing Page: Fintech / SaaS",
@@ -293,7 +293,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         ]
                     },
                     {
-                        image: "/assets/design-concept-responsive.webp",
+                        image: "assets/design-concept-responsive.webp",
                         alt: "Estructura de interfaz web optimizada para dispositivos móviles",
                         eyebrow: "Habilidad",
                         title: "Arquitectura Web Responsive",
