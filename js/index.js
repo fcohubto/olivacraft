@@ -502,19 +502,7 @@ document.addEventListener("DOMContentLoaded", function() {
             carousel.scrollLeft = 0;
             updateNavButtons && updateNavButtons();
         }
-if (contactForm && contactSuccess) {
-    contactForm.hidden = false;
-    contactSuccess.hidden = true;
-    contactForm.reset();
-    Object.keys(fields).forEach(function(key) {
-        var field = fields[key];
-        if (field) field.classList.remove("is-valid", "is-error");
-    });
-    var sentBtn = contactForm.querySelector('[data-contacto-cta]');
-    if (sentBtn) {
-        sentBtn.classList.remove("btn--sent", "btn--loading");
-    }
-}
+
         localStorage.setItem("selectedService", service);
     }
 
@@ -642,24 +630,18 @@ if (contactForm && contactSuccess) {
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
                 body: new URLSearchParams(formData).toString()
             }).then(function() {
-    if (submitBtn) {
-        submitBtn.innerHTML = "✓ Solicitud enviada";
-        submitBtn.classList.remove("btn--loading");
-        submitBtn.classList.add("btn--sent");
-    }
-    setTimeout(function() {
-        // Limpiar todos los campos
-        contactForm.reset();
-        Object.keys(fields).forEach(function(key) {
-            var field = fields[key];
-            if (field) field.classList.remove("is-valid", "is-error");
-        });
-        contactForm.hidden = true;
-        if (contactSuccess) {
-            contactSuccess.hidden = false;
-            contactSuccess.scrollIntoView({ behavior: "smooth", block: "center" });
-        }
-    }, 1200);
+                if (submitBtn) {
+                    submitBtn.innerHTML = "✓ Solicitud enviada";
+                    submitBtn.classList.remove("btn--loading");
+                    submitBtn.classList.add("btn--sent");
+                }
+                setTimeout(function() {
+                    contactForm.hidden = true;
+                    if (contactSuccess) {
+                        contactSuccess.hidden = false;
+                        contactSuccess.scrollIntoView({ behavior: "smooth", block: "center" });
+                    }
+                }, 1200);
             }).catch(function() {
                 if (submitBtn) {
                     submitBtn.textContent = originalText;
