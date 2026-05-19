@@ -136,7 +136,6 @@ document.addEventListener("DOMContentLoaded", function() {
         prevBtn.addEventListener("click", function() { scrollTo("prev"); });
         nextBtn.addEventListener("click", function() { scrollTo("next"); });
 
-        /* Navegación por teclado: flechas izquierda/derecha cuando el carousel tiene foco */
         carousel.addEventListener("keydown", function(e) {
             if (e.key === "ArrowRight") {
                 e.preventDefault();
@@ -149,10 +148,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
         carousel.addEventListener("scroll", updateNavButtons, { passive: true });
 
-        /* Estado inicial de botones */
         updateNavButtons();
 
-        /* Recalcular tras resize */
         window.addEventListener("resize", function() {
             cardWidth = getCardWidth();
             updateNavButtons();
@@ -208,7 +205,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 title: "Casos reales de mejora detectada",
                 description: "Ejemplos de fricciones reales y mejoras posibles para aumentar claridad, confianza y contacto.",
                 cta: "Solicitar revisión →",
-                cards: [{
+                cards: [
+                    {
                         image: "assets/problem1.webp",
                         alt: "Formulario sin estado de envío visible",
                         eyebrow: "Problema",
@@ -248,7 +246,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             { label: "Mejora", text: "Reducir texto, priorizar información clave y enfocar cada bloque en una idea." }
                         ]
                     }
-                ],
+                ]
             },
             contact: {
                 title: "Hablemos de tu página",
@@ -274,7 +272,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     { title: "La información está desordenada", description: "Las personas no entienden qué haces, para quién trabajas o cómo contactarte." },
                     { title: "El diseño no guía la acción", description: "El sitio informa, pero no conduce hacia una decisión clara." },
                     { title: "La experiencia mobile no funciona bien", description: "Gran parte de la confianza se pierde cuando navegar desde celular es incómodo." }
-                ],
+                ]
             },
             offer: {
                 title: "Diseño para sitios web",
@@ -302,7 +300,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 title: "Proyectos de diseño aplicado",
                 description: "Sitios y experiencias diseñadas para comunicar mejor, ordenar contenido y facilitar contacto.",
                 cta: "Solicitar diseño web →",
-                cards: [{
+                cards: [
+                    {
                         image: "assets/design-koyam.webp",
                         alt: "Grupo Koyam sitio web",
                         eyebrow: "Cliente",
@@ -351,7 +350,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 blockLabel: "Alineación estratégica",
                 blockText: "Definimos objetivos comerciales, requerimientos y alcance técnico clave antes de proponer una estructura visual.",
                 timeText: "En menos de 12 horas hábiles te respondo para evaluar los requerimientos de tu proyecto."
-
             }
         }
     };
@@ -415,11 +413,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function updateOfertaFeatures(features) {
         if (!features) return;
-        // Buscamos solo los spans de texto que creamos en el HTML
         var elements = document.querySelectorAll(".oferta__feature-text");
         elements.forEach(function(el, i) {
             if (features[i] && el) {
-                el.textContent = features[i]; // Cambia el texto de forma segura
+                el.textContent = features[i];
             }
         });
     }
@@ -468,21 +465,9 @@ document.addEventListener("DOMContentLoaded", function() {
         setText("[data-contacto-title]", content.contact.title);
         setText("#contacto .section__description", content.contact.description);
         setText("[data-contacto-cta]", content.contact.cta);
-        // Contacto
-        setText("[data-contacto-title]", content.contact.title);
-        setText("#contacto .section__description", content.contact.description);
-        setText("[data-contacto-cta]", content.contact.cta);
         setText("[data-contacto-block-label]", content.contact.blockLabel);
         setText("[data-contacto-block-text]", content.contact.blockText);
-
-
         setText("[data-contacto-time-text]", content.contact.timeText);
-
-        // Control del campo URL (Ocultar/Mostrar de forma segura)... el resto sigue intacto
-
-
-
-        // Control del campo URL (Ocultar/Mostrar de forma segura)... el resto sigue exactamente igual
 
         var urlWrapper = document.getElementById("campo-url");
         var urlInput = document.getElementById("enlace");
@@ -497,7 +482,6 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
 
-        /* Resetear scroll del carousel al cambiar de servicio */
         if (carousel) {
             carousel.scrollLeft = 0;
             updateNavButtons && updateNavButtons();
@@ -506,7 +490,6 @@ document.addEventListener("DOMContentLoaded", function() {
         localStorage.setItem("selectedService", service);
     }
 
-    /* Exponer updateNavButtons al scope externo para que applyService pueda llamarla */
     var updateNavButtons = null;
     if (carousel && prevBtn && nextBtn) {
         updateNavButtons = function() {
@@ -581,6 +564,28 @@ document.addEventListener("DOMContentLoaded", function() {
             return isValid;
         }
 
+        /* Restaurar formulario al cambiar de servicio — aquí fields ya está declarado */
+        serviceButtons.forEach(function(btn) {
+            btn.addEventListener("click", function() {
+                var service = btn.dataset.service;
+                var content = serviceContent[service];
+                if (!content) return;
+                contactForm.hidden = false;
+                contactSuccess.hidden = true;
+                contactForm.reset();
+                Object.keys(fields).forEach(function(key) {
+                    var field = fields[key];
+                    if (field) field.classList.remove("is-valid", "is-error");
+                });
+                var sentBtn = contactForm.querySelector('[data-contacto-cta]');
+                if (sentBtn) {
+                    sentBtn.textContent = content.contact.cta;
+                    sentBtn.classList.remove("btn--sent", "btn--loading");
+                    sentBtn.removeAttribute("aria-disabled");
+                }
+            });
+        });
+
         Object.keys(fields).forEach(function(key) {
             var field = fields[key];
             if (!field || field.type === "checkbox") return;
@@ -636,6 +641,11 @@ document.addEventListener("DOMContentLoaded", function() {
                     submitBtn.classList.add("btn--sent");
                 }
                 setTimeout(function() {
+                    contactForm.reset();
+                    Object.keys(fields).forEach(function(key) {
+                        var field = fields[key];
+                        if (field) field.classList.remove("is-valid", "is-error");
+                    });
                     contactForm.hidden = true;
                     if (contactSuccess) {
                         contactSuccess.hidden = false;
