@@ -208,7 +208,47 @@ document.addEventListener("DOMContentLoaded", function() {
                 title: "Casos reales de mejora detectada",
                 description: "Ejemplos de fricciones reales y mejoras posibles para aumentar claridad, confianza y contacto.",
                 cta: "Solicitar revisión →",
-                cards: null
+                cards: [{
+                        image: "assets/problem1.webp",
+                        alt: "Formulario sin estado de envío visible",
+                        eyebrow: "Problema",
+                        title: "Fuga de leads en formularios críticos",
+                        rows: [
+                            { label: "Impacto", text: "Pérdida de contactos calificados que completan el flujo pero abandonan por falta de confirmación." },
+                            { label: "Mejora", text: "Validar envío, corregir destino y hacer el estado del formulario más claro." }
+                        ]
+                    },
+                    {
+                        image: "assets/problem2.webp",
+                        alt: "Número de contacto sin enlace clickeable",
+                        eyebrow: "Problema",
+                        title: "Quiebre de conversión en tráfico móvil",
+                        rows: [
+                            { label: "Impacto", text: "Pérdida de llamadas inmediatas de clientes listos para comprar debido a fricción técnica en celular." },
+                            { label: "Mejora", text: "Dar visibilidad al número y facilitar el contacto inmediato." }
+                        ]
+                    },
+                    {
+                        image: "assets/problem3.webp",
+                        alt: "Jerarquía visual confusa en página de inicio",
+                        eyebrow: "Problema",
+                        title: "Desorientación y rebote prematuro",
+                        rows: [
+                            { label: "Impacto", text: "El usuario entra, no entiende la propuesta de valor en los primeros 3 segundos y se va a la competencia." },
+                            { label: "Mejora", text: "Ordenar títulos, contenido y llamados a la acción para guiar la lectura." }
+                        ]
+                    },
+                    {
+                        image: "assets/problem4.webp",
+                        alt: "Contenido excesivo sin estructura clara",
+                        eyebrow: "Problema",
+                        title: "Fatiga cognitiva y abandono de flujo",
+                        rows: [
+                            { label: "Impacto", text: "Bloques densos de texto que sepultan los llamados a la acción, reduciendo la intención de contacto." },
+                            { label: "Mejora", text: "Reducir texto, priorizar información clave y enfocar cada bloque en una idea." }
+                        ]
+                    }
+                ],
             },
             contact: {
                 title: "Hablemos de tu página",
@@ -263,7 +303,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 description: "Sitios y experiencias diseñadas para comunicar mejor, ordenar contenido y facilitar contacto.",
                 cta: "Solicitar diseño web →",
                 cards: [{
-                        image: "assets/design-koyam.webp",
+                        image: "/assets/design-koyam.webp",
                         alt: "Grupo Koyam sitio web",
                         eyebrow: "Cliente",
                         title: "Grupo Koyam",
@@ -273,7 +313,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         ]
                     },
                     {
-                        image: "assets/design-rafcon.webp",
+                        image: "/assets/design-rafcon.webp",
                         alt: "Rafcon sitio web",
                         eyebrow: "Cliente",
                         title: "Rafcon",
@@ -283,7 +323,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         ]
                     },
                     {
-                        image: "assets/design-concept-fintech.webp",
+                        image: "/assets/design-concept-fintech.webp",
                         alt: "Concepto de Landing Page de Alta Conversión para Fintech",
                         eyebrow: "Concepto",
                         title: "Landing Page: Fintech / SaaS",
@@ -293,7 +333,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         ]
                     },
                     {
-                        image: "assets/design-concept-responsive.webp",
+                        image: "/assets/design-concept-responsive.webp",
                         alt: "Estructura de interfaz web optimizada para dispositivos móviles",
                         eyebrow: "Habilidad",
                         title: "Arquitectura Web Responsive",
