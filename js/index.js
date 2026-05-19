@@ -263,7 +263,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 description: "Sitios y experiencias diseñadas para comunicar mejor, ordenar contenido y facilitar contacto.",
                 cta: "Solicitar diseño web →",
                 cards: [{
-                        image: "/assets/design-koyam.webp",
+                        image: "olivacraft/assets/design-koyam.webp",
                         alt: "Grupo Koyam sitio web",
                         eyebrow: "Cliente",
                         title: "Grupo Koyam",
